@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: url(./assets/back.png) repeat-x 0 0 fixed;
+  color: #F5F5F5;
+
+  /* Tambahkan animasi untuk background bergerak ke kiri */
+  animation: moveBackground 30s linear infinite;
+}
+
+:root {
+  --accent: #00C8C8;
+  --gap: 2rem;
+  --radius: 12px;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+}
